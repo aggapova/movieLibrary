@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #191414;
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+input[type="search"] {
+  padding: 15px;
+  width: 400px;
+  border-radius: 40px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #282828;
+  font-size: 16px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie {
+  width: 200px;
+  background-color: #282828;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+.movie-image {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie .movie-info {
+  padding: 12px;
+}
+
+.movie .movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* Styles for sorting*/
+.sort-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sort-options label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.sort-options select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #282828;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+/* Styles for MoviePopup */
+.movie-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 750px;
+  background-color: #282828;
+  border-radius: 30px;
+  align-items: center;
+  padding: 50px;
+  padding-top: 0px;
+  z-index: 1000;
+}
+
+.popup-header {
+  text-align: right;
+}
+
+.close-button {
+  margin: 30px;
+  font-size: 24px;
+  color: white;
+}
+
+.popup-content {
+  display: flex;
+  align-items: center;
+}
+
+.popup-image {
+  width: 300px;
+  height: auto;
+}
+
+.movie-popup .movie-info {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.movie-popup .movie-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.movie-popup .movie-info a {
+  color: #b3b3b3;
+}
