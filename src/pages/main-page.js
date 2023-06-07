@@ -8,6 +8,7 @@ const MainPage = () => {
     const [movies, setMovies] = useState([]);
     const [showMovies, setShowMovies] = useState(false);
     const [searchInput, setSearchInput] = useState('');
+    const [selectedMovie, setSelectedMovie] = useState(null);
   
     useEffect(() => {
       fetch('http://localhost:8000/movies')
@@ -26,8 +27,6 @@ const MainPage = () => {
     const filteredMovies = movies.filter((movie) =>
       movie.Title.toLocaleLowerCase().includes(searchInput)
     );
-  
-    const [selectedMovie, setSelectedMovie] = useState(null);
   
     const handleOpenPopup = (movie) => {
       setSelectedMovie(movie);
